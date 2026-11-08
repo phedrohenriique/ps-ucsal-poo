@@ -14,6 +14,23 @@ public class Vehicle {
         this.brand = brand;
         this.engine = engine;
     }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    @Override 
+    public String toString(){
+        return "Vechile(id="+this.id+", brand="+this.brand+", engine="+this.engine+")";
+    }
 }
 
 class Engine {
@@ -26,5 +43,11 @@ class Engine {
             Integer power) {
         this.type = type;
         this.power = power;
+    }
+
+
+    @Override 
+    public String toString(){
+        return "type="+this.type+", power="+this.power;
     }
 }
