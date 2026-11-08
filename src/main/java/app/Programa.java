@@ -24,6 +24,8 @@ public class Programa {
 
         System.out.println("VEHICLE MANAGEMENT SYSTEM");
 
+        // Create 10 new vehicles with Motorcycle and Car classes
+
         // Motorcycles
         Motorcycle vehicle_01 = new Motorcycle(1, "toyota", "VM220", 220);
         Motorcycle vehicle_03 = new Motorcycle(3, "honda", "CB500", 500);
@@ -33,9 +35,9 @@ public class Programa {
 
         // Cars
         Car vehicle_02 = new Car(2, "ford", "BM5500", 550);
-        Car vehicle_04 = new Car(7, "chevrolet", "Onix", 1000);
-        Car vehicle_06 = new Car(8, "volkswagen", "Golf", 1600);
-        Car vehicle_08 = new Car(9, "fiat", "Argo", 1300);
+        Car vehicle_04 = new Car(4, "chevrolet", "Onix", 1000);
+        Car vehicle_06 = new Car(6, "volkswagen", "Golf", 1600);
+        Car vehicle_08 = new Car(8, "fiat", "Argo", 1300);
         Car vehicle_10 = new Car(10, "hyundai", "HB20", 1000);
 
         VehicleService vehicleService = new VehicleService();
@@ -51,6 +53,9 @@ public class Programa {
         vehicleService.addVehicle(vehicle_10);
 
         System.out.println("VEHICLES ADDED:"+ vehicleService.getVehicleListSize());
+
+        // Starts text UI in terminal using vehicleService 
+        // UI uses dependency injection from vehicleService
 
         UI ui = new UI(vehicleService);
         ui.frontendUI();

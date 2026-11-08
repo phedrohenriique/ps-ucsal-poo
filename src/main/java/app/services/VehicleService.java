@@ -6,12 +6,29 @@ import java.util.List;
 
 import app.models.Vehicle;
 
+// class to manage all Vehicle CRUD operations
+
 public class VehicleService {
 
     private List<Vehicle> vehicleList = new ArrayList<>();
 
     public void addVehicle(Vehicle vehicle) {
         vehicleList.add(vehicle);
+    }
+
+    public Vehicle getVehicleById(Integer id) {
+
+        Vehicle vehicle = null;
+
+        for (int i = 0; i < vehicleList.size(); i++) {
+
+            if (vehicleList.get(i).getId().equals(id)) {
+                vehicle = vehicleList.get(i);
+            }
+
+        }
+
+        return vehicle;
     }
 
     public void removeVehicle(Integer id) {
@@ -40,7 +57,7 @@ public class VehicleService {
         return vehicleList;
     }
 
-    public Integer getVehicleListSize(){
+    public Integer getVehicleListSize() {
         return vehicleList.size();
     }
 
@@ -53,8 +70,7 @@ public class VehicleService {
     public void showVehicleListOrderById() {
         List<Vehicle> listOrderById = getVehicleList();
         listOrderById.sort(
-                Comparator.comparing(Vehicle::getId)
-        );
+                Comparator.comparing(Vehicle::getId));
 
         for (Vehicle obj : listOrderById) {
             System.out.println(obj);

@@ -1,5 +1,7 @@
 package app.models;
 
+// Vehicle class that uses Engine class with getters and setters
+
 public class Vehicle {
 
     private Integer id;
@@ -10,8 +12,7 @@ public class Vehicle {
             Integer id,
             String brand,
             String engineType,
-            Integer enginePower
-        ) {
+            Integer enginePower) {
         this.id = id;
         this.brand = brand;
         this.engine = new Engine(engineType, enginePower);
@@ -29,27 +30,63 @@ public class Vehicle {
         return engine;
     }
 
-    @Override 
-    public String toString(){
-        return "Vechile(id="+this.id+", brand="+this.brand+", engine="+this.engine+")";
+    public void setBrand(String value) {
+        this.brand = value;
+    }
+
+    public void setEngineType(String value) {
+        this.engine.setType(value);
+    }
+
+    public void setEnginePower(Integer value) {
+        this.engine.setPower(value);
+    }
+
+    public void setEngine(String engineType, Integer enginePower) {
+        this.engine = new Engine(engineType, enginePower);
+
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
+    @Override
+    public String toString() {
+        return "Vechile(id=" + this.id + ", brand=" + this.brand + ", engine=" + this.engine + ")";
     }
 }
 
 class Engine {
 
-    private String type;
-    private Integer power;
+    private String engineType;
+    private Integer enginePower;
 
     Engine(
             String type,
             Integer power) {
-        this.type = type;
-        this.power = power;
+        this.engineType = type;
+        this.enginePower = power;
     }
 
+    public Integer getPower() {
+        return enginePower;
+    }
 
-    @Override 
-    public String toString(){
-        return "type="+this.type+", power="+this.power;
+    public String getType() {
+        return engineType;
+    }
+
+    public void setPower(Integer value) {
+        this.enginePower = value;
+    }
+
+    public void setType(String value) {
+        this.engineType = value;
+    }
+
+    @Override
+    public String toString() {
+        return "type=" + this.engineType + ", power=" + this.enginePower;
     }
 }
