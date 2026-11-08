@@ -1,2 +1,2 @@
-# ps-ucsal-database
-a project for the database class at ucsal university
+# ps-ucsal-poo
+a project for the poo class at ucsal university
