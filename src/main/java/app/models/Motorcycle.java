@@ -12,7 +12,7 @@ public class Motorcycle extends Vehicle {
     }
 
     public void showDesign() {
-        System.out.print("Car(qtdWheel=" + this.qtdWheel + ", qtdDoor=" + this.qtdDoor + ")");
+        System.out.print("MotorcycleDesign(qtdWheel=" + this.qtdWheel + ", qtdDoor=" + this.qtdDoor + ")");
     }
 
     @Override 

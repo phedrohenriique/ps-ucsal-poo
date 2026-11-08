@@ -12,7 +12,7 @@ public class Car extends Vehicle {
     }
 
     public void showDesign() {
-        System.out.print("Car(qtdWheel=" + this.qtdWheel + ", qtdDoor=" + this.qtdDoor + ")");
+        System.out.print("CarDesign(qtdWheel=" + this.qtdWheel + ", qtdDoor=" + this.qtdDoor + ")");
     }
 
     @Override
