@@ -24,6 +24,7 @@ public class VehicleService {
 
             if (vehicleList.get(i).getId().equals(id)) {
                 vehicle = vehicleList.get(i);
+                break;
             }
 
         }
@@ -54,7 +55,8 @@ public class VehicleService {
     }
 
     public List<Vehicle> getVehicleList() {
-        return vehicleList;
+        List<Vehicle> vehicleListCopy = this.vehicleList;
+        return vehicleListCopy;
     }
 
     public Integer getVehicleListSize() {
