@@ -9,10 +9,12 @@ public class Vehicle {
     public Vehicle(
             Integer id,
             String brand,
-            Engine engine) {
+            String engineType,
+            Integer enginePower
+        ) {
         this.id = id;
         this.brand = brand;
-        this.engine = engine;
+        this.engine = new Engine(engineType, enginePower);
     }
 
     public Integer getId() {

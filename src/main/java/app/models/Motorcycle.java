@@ -2,8 +2,8 @@ package app.models;
 
 public class Motorcycle extends Vehicle {
 
-    public Motorcycle(Integer id, String brand, Engine engine){
-        super(id, brand, engine);
+    public Motorcycle(Integer id, String brand, String engineType, Integer enginePower){
+        super(id, brand, engineType, enginePower);
     }
 
     @Override 

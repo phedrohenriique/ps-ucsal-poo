@@ -1,6 +1,7 @@
 package app.services;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import app.models.Vehicle;
@@ -39,10 +40,26 @@ public class VehicleService {
         return vehicleList;
     }
 
+    public Integer getVehicleListSize(){
+        return vehicleList.size();
+    }
+
     public void showVehicleList() {
         for (Vehicle obj : this.vehicleList) {
             System.out.println(obj);
-        }   
+        }
+    }
+
+    public void showVehicleListOrderById() {
+        List<Vehicle> listOrderById = getVehicleList();
+        listOrderById.sort(
+                Comparator.comparing(Vehicle::getId)
+        );
+
+        for (Vehicle obj : listOrderById) {
+            System.out.println(obj);
+        }
+
     }
 
 }
