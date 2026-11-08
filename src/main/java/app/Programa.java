@@ -60,15 +60,6 @@ public class Programa {
         UI ui = new UI(vehicleService);
         ui.frontendUI();
 
-
-        try {
-
-        } catch (Exception exception) {
-
-            System.err.println("ERROR : " + exception.getMessage());
-
-        }
-
     }
 
 }
